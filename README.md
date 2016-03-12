@@ -1,6 +1,6 @@
 # Sample Application for FxMVP
 
- This project demonstrate the usage of fxMVP. FxMVP is a small library to help
+ This project demonstrate the usage of FxMVP. FxMVP is a small library to help
  implement the MVP design pattern for Java Fx applications.
 
  ## Start Application
