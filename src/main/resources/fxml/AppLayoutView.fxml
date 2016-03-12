@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/null" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.dreamnetworx.fxmvp.sample.app.ui.layout.AppLayoutViewImpl">
+   <children>
+      <Label layoutX="11.0" layoutY="9.0" text="%app.title" />
+      <Button fx:id="buttonAdd" layoutX="11.0" layoutY="513.0" mnemonicParsing="false" text="+" />
+      <AnchorPane fx:id="contentPane" layoutX="257.0" layoutY="45.0" prefHeight="463.0" prefWidth="526.0" />
+      <Button fx:id="buttonSync" layoutX="194.0" layoutY="513.0" mnemonicParsing="false" text="Sync" />
+      <AnchorPane fx:id="menuPane" layoutX="14.0" layoutY="45.0" prefHeight="463.0" prefWidth="228.0" />
+   </children>
+</AnchorPane>
