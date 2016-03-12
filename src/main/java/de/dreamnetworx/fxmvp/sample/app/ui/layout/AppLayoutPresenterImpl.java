@@ -15,23 +15,32 @@ import org.springframework.core.io.ClassPathResource;
 
 import java.io.IOException;
 
+/**
+ * The job from FxMvpAppMvpPresenter is to create and initialize the sub presenters und setup the
+ * application layout.
+ *
+ */
 public class AppLayoutPresenterImpl extends FxMvpAppMvpPresenter<AppLayoutView> implements AppLayoutPresenter<AppLayoutView> {
 
     private static final Logger LOG = LoggerFactory.getLogger(AppLayoutPresenterImpl.class);
 
+    /**
+     * Presenter to view the person details
+     */
     private PersonDetailPresenter<PersonDetailView> personDetailPresenter;
-    private PersonSelectorPresenter<PersonSelectorView> personSelectorPresenter;
 
     /**
-     * public AppLayoutPresenterImpl(final AppLayoutView view, final Node viewNode, final EventBus eventBus) {
-     * super(view, viewNode, eventBus);
-     * }
-     **/
+     * Presenter to select a person
+     */
+    private PersonSelectorPresenter<PersonSelectorView> personSelectorPresenter;
 
     @Override
     public void startPresenting(Stage stage) {
 
+        //Initialize another FXML View with presenter. Only the fxml file is needed!
         final FxMvpResult personDetailView = initFxPresenter(stage, "PersonDetailView");
+        //the FxMvpResult provides access to viewNode, view and presenter. The viewNode can be add
+        //to the application layout.
         getView().getContentPane().getChildren().add(personDetailView.getNode());
 
         final FxMvpResult personSelectorView = initFxPresenter(stage, "PersonSelectorView");
@@ -45,8 +54,7 @@ public class AppLayoutPresenterImpl extends FxMvpAppMvpPresenter<AppLayoutView> 
         //delegate to layout...
         final Scene scene = new Scene((Parent) getViewNode(), 700, 550);
         stage.setScene(scene);
-        stage.setTitle("Address Book");
-        final String css;
+        stage.setTitle("FxMVP Application");
         addStyleClass(scene,"style/style.css");
         stage.show();
     }

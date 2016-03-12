@@ -13,11 +13,11 @@ import org.springframework.boot.SpringApplication;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AddressBookApp extends FxMvpBootstrapApplication implements Initializable {
+public class FxMvpApplication extends FxMvpBootstrapApplication implements Initializable {
 
     private EventBus eventBus = new EventBus();
 
-    public AddressBookApp() {
+    public FxMvpApplication() {
         super();
     }
 
