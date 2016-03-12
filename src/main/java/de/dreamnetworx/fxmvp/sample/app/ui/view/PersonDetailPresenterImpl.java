@@ -6,7 +6,6 @@ import de.dreamnetworx.fxmvp.api.FxMvpPresenter;
 import de.dreamnetworx.fxmvp.sample.app.service.PersonService;
 import de.dreamnetworx.fxmvp.sample.app.ui.event.PeopleSelectionEvent;
 import de.dreamnetworx.fxmvp.sample.app.ui.model.PersonViewModel;
-import javafx.beans.binding.Bindings;
 import javafx.scene.Node;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
